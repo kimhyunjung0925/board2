@@ -29,6 +29,22 @@
                 </tr>
             </tbody>
         </table>
+<!--    이전페이지 버튼 현재페이지가 첫페이지가 아닐경우에만 보이게   -->
+        <a th:if="${nowPage != startPage}" th:href="@{/board/list(page=${pre}, searchKeyword= ${param.searchKeyword})}"  th:text="이전" ></a>
+
+<!--    페이지 찍어주는 곳    -->
+        <th:block th:each="page : ${#numbers.sequence(startPage,endPage)}">
+            <a th:if="${page != nowPage}" th:href="@{/board/list(page=${page - 1}, searchKeyword= ${param.searchKeyword})}" th:text="${page}"></a>
+            <strong th:if="${page == nowPage}" th:text="${page}" style="color: red"></strong>
+        </th:block>
+
+<!--    다음페이지 버튼 현재페이지가 마지막페이지가 아닐경우에만 보이게   -->
+        <a th:if="${nowPage != endPage}" th:href="@{/board/list(page=${next}, searchKeyword= ${param.searchKeyword})}"  th:text="다음" ></a>
+
+        <form th:action="@{/board/list}" method="get">
+            <input type="text" name="searchKeyword">
+            <button type="submit">검색</button>
+        </form>
     </div>
 </body>
 </html>

@@ -10,7 +10,7 @@
 #### ● JAVA 11
 #### ● SpringBoot 
 #### ● thymeleaf, javascript, html5, css 
-#### ● Mysql
+#### ● Mysql, JPA Repository
 
 ## 주요기능 소개
 

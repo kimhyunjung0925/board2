@@ -1,6 +1,5 @@
 package com.study.board2.Controller;
 
-import com.study.board2.Board2Application;
 import com.study.board2.entity.Board;
 import com.study.board2.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,20 +11,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.service.annotation.GetExchange;
 
 @Controller
+@RequestMapping("/board")
 public class BoardController {
     @Autowired
     private BoardService boardService;
 
-    @GetMapping("/board/write")
+    @GetMapping("/write")
     public String boardWriteForm() {
 
-        return "boardWrite";
+        return "/board/Write";
     }
 
-    @PostMapping("/board/writePro")
+    @PostMapping("/writePro")
     public String boardWritePro(Board board, Model model, MultipartFile file) throws Exception {
         boardService.boardWrite(board, file);
 
@@ -34,7 +33,7 @@ public class BoardController {
         return "message";
     }
 
-    @GetMapping("/board/list")
+    @GetMapping("/list")
     public String boardList(Model model,
                             @PageableDefault(page=0,size = 15,sort = "iboard", direction = Sort.Direction.DESC) Pageable pageable,
                             String searchKeyword){
@@ -62,29 +61,31 @@ public class BoardController {
         model.addAttribute("pre", pre);
         model.addAttribute("next", next);
 
-        return "boardList";
+        return "board/List";
     }
 
-    @GetMapping("/board/view")
+    @GetMapping("/view")
     public String boardView(Model model, Integer iboard){
         model.addAttribute("board", boardService.boardView(iboard));
-        return "boardView";
+
+        return "board/View";
+
     }
 
-    @GetMapping("/board/delete")
+    @GetMapping("/delete")
     public String boardDelete(Integer iboard){
         boardService.boardDelete(iboard);
         return "redirect:/board/list";
     }
 
-    @GetMapping("/board/modify/{iboard}")
+    @GetMapping("/modify/{iboard}")
     //PathVariable 쓰면 쿼리스트링이 아니라 깔끔하게 /위에 iboard만 넣어서 작동
     public String boardModify(@PathVariable("iboard") Integer iboard, Model model){
         model.addAttribute("board", boardService.boardView(iboard));
-        return "boardModify";
+        return "board/Modify";
     }
 
-    @PostMapping("/board/update/{iboard}")
+    @PostMapping("/update/{iboard}")
     public String boardUpdate(@PathVariable("iboard") Integer iboard, Board board, Model model, MultipartFile file) throws Exception {
 
         Board boardTemp  = boardService.boardView(iboard);

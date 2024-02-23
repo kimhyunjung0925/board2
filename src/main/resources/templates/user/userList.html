@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원리스트</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        border: 1px solid #444444;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #444444;
+    }
+</style>
+<body>
+<h1>회원정보</h1>
+    <table>
+        <tr style="">
+            <td>아이디</td>
+<!--            <td>비밀번호</td>-->
+            <td>이메일</td>
+            <td>이름</td>
+            <td>상세조회</td>
+            <td>삭제</td>
+        </tr>
+        <tr th:each="user : ${userList}">
+            <td th:text="${user.uid}"></td>
+<!--            <td th:text="${user.upw}"></td>-->
+            <td th:text="${user.uemail}"></td>
+            <td th:text="${user.unm}"></td>
+            <td>
+                <a th:href="@{|/user/${user.iuser}|}">조회</a>
+            </td>
+            <td>
+                <a th:href="@{|/user/delete/${user.iuser}|}">삭제</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

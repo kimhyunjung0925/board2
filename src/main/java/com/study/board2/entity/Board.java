@@ -12,6 +12,7 @@ public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer iboard;
+
     private String title;
     private String content;
     private String filename;

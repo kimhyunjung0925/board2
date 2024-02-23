@@ -23,11 +23,12 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
+
 	implementation ("org.springframework.boot:spring-boot-devtools")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	compileOnly("org.projectlombok:lombok")
-	runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 

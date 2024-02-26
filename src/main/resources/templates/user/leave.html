@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원탈퇴</title>
+    <script defer th:src="@{/js/user/leave.js}"></script>
+
+</head>
+<body>
+    <form action="/user/leave" method="post" id="leave-frm">
+
+        아이디 : <input type="text" th:value = "${user.getUid()}" readonly>
+        비밀번호확인 : <input type="text" value="" id="pwChk">
+        <input type="hidden" th:value = "${user.getUpw()}" id="oriPwChk">
+        <input type="hidden" th:value = "${user.getIuser()}" name="iuser">
+        <input type="submit" value="탈퇴하기">
+
+    </form>
+<!--    <script src="/js/user/leave.js"></script>-->
+</body>
+
+</html>

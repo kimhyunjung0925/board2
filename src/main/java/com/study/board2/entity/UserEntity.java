@@ -4,7 +4,6 @@ import com.study.board2.dto.UserDto;
 import jakarta.persistence.*;
 import lombok.*;
 
-
 @Entity
 @Getter
 @Setter

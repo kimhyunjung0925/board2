@@ -20,7 +20,6 @@
     <table>
         <tr style="">
             <td>아이디</td>
-<!--            <td>비밀번호</td>-->
             <td>이메일</td>
             <td>이름</td>
             <td>상세조회</td>
@@ -28,7 +27,6 @@
         </tr>
         <tr th:each="user : ${userList}">
             <td th:text="${user.uid}"></td>
-<!--            <td th:text="${user.upw}"></td>-->
             <td th:text="${user.uemail}"></td>
             <td th:text="${user.unm}"></td>
             <td>

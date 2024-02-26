@@ -10,7 +10,9 @@
     <p th:if="${session.loginIuser == null}" th:text="비회원"></p>
     
     <a href="/board/list">게시판</a> <br>
-    <a href="/user/list">회원리스트</a> <br>
+<!--    TODO 나중에 관리자만 회원리스트 뜨게 해보기 -->
+    <p th:if="${session.loginIuser != null}"><a href="/user/list">회원리스트</a></p>
+
     <a th:if="${session.loginIuser == null}" href="/user/login">로그인</a>
     <br>
     <a th:if="${session.loginIuser == null}" href="/user/join">회원가입</a>
@@ -18,7 +20,6 @@
     <a th:if="${session.loginIuser != null}" href="/user/update">회원정보 수정</a>
     <br>
     <a th:if="${session.loginIuser != null}" href="/user/logout">로그아웃</a>
-
 
 </body>
 </html>

@@ -7,11 +7,12 @@
 <body>
     <form action="/user/update" method="post">
         <input type="hidden" th:value="${updateUser.iuser}" name="iuser"><br>
-        아이디 : <input type="text" th:value="${updateUser.uid}" name="uid"> <br>
+        아이디 : <input type="text" th:value="${updateUser.uid}" name="uid" style="background-color: darkgray" readonly> <br>
         비밀번호: <input type="password" th:value="${updateUser.upw}" name="upw"> <br>
-        이메일: <input type="text" th:value="${updateUser.uemail}" name="uemail" readonly> <br>
+        이메일: <input type="text" th:value="${updateUser.uemail}" name="uemail"> <br>
         이름: <input type="text" th:value="${updateUser.unm}" name="unm"> <br>
         <input type="submit" value="정보수정">
+        <a th:href="@{|/user/leave/${updateUser.iuser}|}"> 회원탈퇴</a>
     </form>
 </body>
 </html>

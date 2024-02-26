@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>join화면</title>
+
 </head>
 <body>
-    <form action="/user/join" method="post">
-        아이디 : <input type="text" name="uid"> <br>
-        비밀번호: <input type="password" name="upw"> <br>
-        이메일 : <input type="text" name="uemail"> <br>
-        이름 : <input type="text" name="unm"> <br>
+    <form action="/user/join" method="post" id="join-frm">
+        <!--       버튼이용해 onclick 사용도 가능   -->
+<!--        아이디 : <input type="text" name="uid" id="uid" onblur="idCheck()">-->
+        아이디 : <input type="text" name="uid" id="uid" >
+        <input type="button" value="중복확인" id="idChkBtn">
+        <span id="id-check-result" style="color: blue"></span>
+        <br>
+<!--        TODO 비밀번호, 이메일 형식 체크 할 예정-->
+        비밀번호: <input type="password" name="upw" id="upw">
+        <span id="pw-check-result" style="color: blue"></span>
+        <br>
+        이메일 : <input type="text" name="uemail" id="uemail">
+        <span id="email-check-result" style="color: blue"></span>
+        <br>
+        이름 : <input type="text" name="unm" id="unm">
+        <br>
         <input type="submit" value="회원가입">
     </form>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="/js/user/join.js"></script>
+
 </body>
+
 </html>

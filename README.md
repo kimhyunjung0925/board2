@@ -15,8 +15,9 @@
 ## 주요기능 소개
 
 #### CRUD
-- JPA Repository를 사용한 기본 CRUD 기능 구현
-- @PageableDefault를 사용한 간단한 페이징 처리
+- [JPA Repository를 사용한 기본 CRUD 기능 구현](https://everythingoes.tistory.com/16)
+- [@PageableDefault를 사용한 간단한 페이징 처리](https://everythingoes.tistory.com/17)
+- [SpringDataJPA를 활용한 테이블 생성](https://everythingoes.tistory.com/18)
 
 #### 회원
 💻 코드 요약본은 각 단계 클릭시 이동

@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>join화면</title>
+    <link rel="icon" href="./images/images2/favicon.png">
+    <link rel="stylesheet" th:href="@{/css/user/join.css}">
 
 </head>
 <body>
     <form action="/user/join" method="post" id="join-frm">
-        <!--       버튼이용해 onclick 사용도 가능   -->
-<!--        아이디 : <input type="text" name="uid" id="uid" onblur="idCheck()">-->
-        아이디 : <input type="text" name="uid" id="uid" >
-        <input type="button" value="중복확인" id="idChkBtn">
-        <span id="id-check-result" style="color: blue"></span>
-        <br>
-<!--        TODO 비밀번호, 이메일 형식 체크 할 예정-->
-        비밀번호: <input type="password" name="upw" id="upw">
-        <span id="pw-check-result" style="color: blue"></span>
-        <br>
-        이메일 : <input type="text" name="uemail" id="uemail">
-        <span id="email-check-result" style="color: blue"></span>
-        <br>
-        이름 : <input type="text" name="unm" id="unm">
-        <br>
-        <input type="submit" value="회원가입">
+        <div class="member">
+        <!-- 1. 로고 -->
+            <img class="logo" th:src="@{/files/hyunjung.png}">
+
+            <div class="field">
+    <!--       버튼이용해 onclick 사용도 가능   -->
+    <!--        아이디 : <input type="text" name="uid" id="uid" onblur="idCheck()">-->
+                아이디 <input type="text" name="uid" placeholder="아이디" class="form-control" id="uid">
+                <input type="button" value="중복확인" id="idChkBtn">
+                <span id="id-check-result" style="color: blue"></span>
+            </div>
+
+            <div class="field">
+    <!--        TODO 비밀번호, 이메일 형식 체크 할 예정 -->
+                비밀번호 <input type="password" name="upw" placeholder="비밀번호" class="form-control" id="upw">
+                <span id="pw-check-result" style="color: blue"></span>
+            </div>
+
+            <div class="field">
+                이메일  <input type="text" name="uemail" id="uemail">
+                <span id="email-check-result" style="color: blue"></span>
+            </div>
+
+            <div class="field">
+                이름  <input type="text" name="unm" id="unm">
+            </div>
+
+            <input type="submit" value="회원가입">
+
+            <div class="member-footer">
+                <div>
+                    <a href="#none">이용약관</a>
+                    <a href="#none">개인정보처리방침</a>
+                    <a href="#none">회원정보 고객센터</a>
+                </div>
+            </div>
+
+        </div>
     </form>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"

@@ -17,7 +17,8 @@ public class BoardService {
 
     @Autowired
     private BoardRepository boardRepository;
-    //글 작성 처리
+
+    //글 작성 처리, 글 수정처리
     public void boardWrite(Board board, MultipartFile file) throws Exception{
 // 파일 처리 로직
         String projectPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\files";
@@ -54,7 +55,6 @@ public class BoardService {
         return boardRepository.findByTitleContaining(searchKeyword, pageable);
     }
 
-
     //게시글 상세페이지 처리
     public Board boardView(Integer iboard){
         return boardRepository.findById(iboard).get();
@@ -62,7 +62,5 @@ public class BoardService {
 
     //특정 게시글 삭제
     public void boardDelete(Integer iboard){ boardRepository.deleteById(iboard);}
-
-
 
 }

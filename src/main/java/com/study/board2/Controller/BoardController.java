@@ -18,12 +18,13 @@ public class BoardController {
     @Autowired
     private BoardService boardService;
 
+    //글작성폼
     @GetMapping("/write")
     public String boardWriteForm() {
-
         return "/board/Write";
     }
 
+    //글작성처리
     @PostMapping("/writePro")
     public String boardWritePro(Board board, Model model, MultipartFile file) throws Exception {
         boardService.boardWrite(board, file);
@@ -33,6 +34,7 @@ public class BoardController {
         return "message";
     }
 
+    //글리스트
     @GetMapping("/list")
     public String boardList(Model model,
                             @PageableDefault(page=0,size = 15,sort = "iboard", direction = Sort.Direction.DESC) Pageable pageable,
@@ -64,6 +66,7 @@ public class BoardController {
         return "board/List";
     }
 
+    //글상세보기
     @GetMapping("/view")
     public String boardView(Model model, Integer iboard){
         model.addAttribute("board", boardService.boardView(iboard));
@@ -72,12 +75,7 @@ public class BoardController {
 
     }
 
-    @GetMapping("/delete")
-    public String boardDelete(Integer iboard){
-        boardService.boardDelete(iboard);
-        return "redirect:/board/list";
-    }
-
+    //글수정폼
     @GetMapping("/modify/{iboard}")
     //PathVariable 쓰면 쿼리스트링이 아니라 깔끔하게 /위에 iboard만 넣어서 작동
     public String boardModify(@PathVariable("iboard") Integer iboard, Model model){
@@ -85,6 +83,7 @@ public class BoardController {
         return "board/Modify";
     }
 
+    //글수정처리
     @PostMapping("/update/{iboard}")
     public String boardUpdate(@PathVariable("iboard") Integer iboard, Board board, Model model, MultipartFile file) throws Exception {
 
@@ -98,5 +97,12 @@ public class BoardController {
         model.addAttribute("searchUrl","/board/list");
 
         return "message";
+    }
+
+    //글삭제처리
+    @GetMapping("/delete")
+    public String boardDelete(Integer iboard){
+        boardService.boardDelete(iboard);
+        return "redirect:/board/list";
     }
 }

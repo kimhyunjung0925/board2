@@ -22,7 +22,7 @@
 - [준비단계](https://github.com/kimhyunjung0925/board2/wiki/%ED%9A%8C%EC%9B%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-1.-entity,-dto,-repository,-Controller,-Service-%EC%83%9D%EC%84%B1)
 - [회원가입](https://github.com/kimhyunjung0925/board2/wiki/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85)
 - [로그인, 로그아웃](https://github.com/kimhyunjung0925/board2/wiki/%EB%A1%9C%EA%B7%B8%EC%9D%B8,-%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83)
-- [회원정보 상세보기, 회원정보수정]()
+- [회원정보 상세보기, 회원정보수정](https://github.com/kimhyunjung0925/board2/wiki/%ED%9A%8C%EC%9B%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-3.-%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4-%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0,-%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%EC%88%98%EC%A0%95)
 - [회원탈퇴]()
 
 ## 기타

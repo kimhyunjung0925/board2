@@ -26,6 +26,13 @@
 - [회원리스트, 회원정보 상세보기, 회원리스트에서 삭제](https://github.com/kimhyunjung0925/board2/wiki/%ED%9A%8C%EC%9B%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-3.-%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4-%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0,-%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%EC%88%98%EC%A0%95)
 - [회원정보수정, 회원탈퇴](https://github.com/kimhyunjung0925/board2/wiki/%ED%9A%8C%EC%9B%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-5.%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%EC%88%98%EC%A0%95,-%ED%9A%8C%EC%9B%90%ED%83%88%ED%87%B4)
 
+#### 게시판
+💻 코드 요약본은 각 단계 클릭시 이동
+- [준비단계]()
+- [글작성]()
+- [글리스트, 상세보기, 검색]()
+- [글수정, 글삭제]()
+
 ## 기타
 <div>
   <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white" />

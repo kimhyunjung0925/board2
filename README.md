@@ -29,9 +29,9 @@
 #### 게시판
 💻 코드 요약본은 각 단계 클릭시 이동
 - [준비단계](https://github.com/kimhyunjung0925/board2/wiki/%EA%B2%8C%EC%8B%9C%ED%8C%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-1.-Entity,-Repository,-Controller,-Serivice)
-- [글작성]()
-- [글리스트, 상세보기, 검색]()
-- [글수정, 글삭제]()
+- [글작성](https://github.com/kimhyunjung0925/board2/wiki/%EA%B2%8C%EC%8B%9C%ED%8C%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-2.%EA%B8%80%EC%9E%91%EC%84%B1)
+- [글리스트, 상세보기, 검색](https://github.com/kimhyunjung0925/board2/wiki/%EA%B2%8C%EC%8B%9C%ED%8C%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-3.-%EA%B8%80%EB%A6%AC%EC%8A%A4%ED%8A%B8,-%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0,-%EA%B2%80%EC%83%89)
+- [글수정, 글삭제](https://github.com/kimhyunjung0925/board2/wiki/%EA%B2%8C%EC%8B%9C%ED%8C%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-4.-%EA%B8%80%EC%88%98%EC%A0%95,-%EA%B8%80%EC%82%AD%EC%A0%9C)
 
 ## 기타
 <div>

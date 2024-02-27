@@ -1,6 +1,6 @@
 
 # 🖥 springboot-project
-기본 CRUD, 회원가입 기능 구현
+기본 CRUD, 게시판 기능, 회원가입 기능 구현
 
 ## 📆 개발기간
 2024.02.13 ~ 
@@ -15,11 +15,24 @@
 ## 주요기능 소개
 
 #### CRUD
-- JPA Repository를 사용한 기본 CRUD 기능 구현
-- @PageableDefault를 사용한 간단한 페이징 처리
+- [JPA Repository를 사용한 기본 CRUD 기능 구현](https://everythingoes.tistory.com/16)
+- [@PageableDefault를 사용한 간단한 페이징 처리](https://everythingoes.tistory.com/17)
+- [SpringDataJPA를 활용한 테이블 생성](https://everythingoes.tistory.com/18)
 
 #### 회원
-- 
+💻 코드 요약본은 각 단계 클릭시 이동
+- [준비단계](https://github.com/kimhyunjung0925/board2/wiki/%ED%9A%8C%EC%9B%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-1.-entity,-dto,-repository,-Controller,-Service-%EC%83%9D%EC%84%B1)
+- [회원가입](https://github.com/kimhyunjung0925/board2/wiki/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85)
+- [로그인, 로그아웃](https://github.com/kimhyunjung0925/board2/wiki/%EB%A1%9C%EA%B7%B8%EC%9D%B8,-%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83)
+- [회원리스트, 회원정보 상세보기, 회원리스트에서 삭제](https://github.com/kimhyunjung0925/board2/wiki/%ED%9A%8C%EC%9B%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-3.-%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4-%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0,-%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%EC%88%98%EC%A0%95)
+- [회원정보수정, 회원탈퇴](https://github.com/kimhyunjung0925/board2/wiki/%ED%9A%8C%EC%9B%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-5.%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%EC%88%98%EC%A0%95,-%ED%9A%8C%EC%9B%90%ED%83%88%ED%87%B4)
+
+#### 게시판
+💻 코드 요약본은 각 단계 클릭시 이동
+- [준비단계](https://github.com/kimhyunjung0925/board2/wiki/%EA%B2%8C%EC%8B%9C%ED%8C%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-1.-Entity,-Repository,-Controller,-Serivice)
+- [글작성](https://github.com/kimhyunjung0925/board2/wiki/%EA%B2%8C%EC%8B%9C%ED%8C%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-2.%EA%B8%80%EC%9E%91%EC%84%B1)
+- [글리스트, 상세보기, 검색](https://github.com/kimhyunjung0925/board2/wiki/%EA%B2%8C%EC%8B%9C%ED%8C%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-3.-%EA%B8%80%EB%A6%AC%EC%8A%A4%ED%8A%B8,-%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0,-%EA%B2%80%EC%83%89)
+- [글수정, 글삭제](https://github.com/kimhyunjung0925/board2/wiki/%EA%B2%8C%EC%8B%9C%ED%8C%90%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-4.-%EA%B8%80%EC%88%98%EC%A0%95,-%EA%B8%80%EC%82%AD%EC%A0%9C)
 
 ## 기타
 <div>

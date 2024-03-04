@@ -55,6 +55,8 @@ public class BoardController {
         int pre = pageable.previousOrFirst().getPageNumber();
         int next = pageable.next().getPageNumber();
 
+        model.addAttribute("keyword", searchKeyword);
+
         model.addAttribute("list", list);
         model.addAttribute("nowPage", nowPage);
         model.addAttribute("startPage", startPage);

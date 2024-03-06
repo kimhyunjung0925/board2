@@ -74,7 +74,6 @@ public class BoardController {
         model.addAttribute("board", boardService.boardView(iboard));
 
         return "board/View";
-
     }
 
     //글수정폼

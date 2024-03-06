@@ -1,25 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>main</title>
+    <link rel="stylesheet" th:href="@{/css/main/main.css}">
 </head>
 <body>
-    <div>메인화면입니다.</div>
-    <p th:text="'현재로그인ID : ' + ${session.loginUid}"></p>
-    <p th:if="${session.loginIuser == null}" th:text="비회원"></p>
-    
-    <a href="/board/list">게시판</a> <br>
-<!--    TODO 나중에 관리자만 회원리스트 뜨게 해보기 -->
-    <p th:if="${session.loginIuser != null}"><a href="/user/list">회원리스트</a></p>
+    <header>
+        <div style="display: flex; align-content: center; width: 100%;">
+            <div style="width: 20%;"><img class="logo" th:src="@{/files/hyunjung.png}" style="width: 140px; height: 40px;"></div>
+            <div style="display: flex; justify-content: end; width: 80%;" >
+                <p th:if="${session.loginIuser != null}" th:text="'현재로그인ID : ' + ${session.loginUid}" style="margin-right: 10px;"></p>
+<!--                <p th:if="${session.loginIuser == null}" th:text="비회원"></p>-->
+                <a th:if="${session.loginIuser == null}" href="/user/login" class="aTag" style="width: 100px;">로그인</a>
+                <a th:if="${session.loginIuser == null}" href="/user/join" class="aTag" style="width: 100px;">회원가입</a>
 
-    <a th:if="${session.loginIuser == null}" href="/user/login">로그인</a>
-    <br>
-    <a th:if="${session.loginIuser == null}" href="/user/join">회원가입</a>
+                <a th:if="${session.loginIuser != null}" href="/user/update" class="aTag" style="width: 110px;">회원정보 수정</a>
+                <a th:if="${session.loginIuser != null}" href="/user/logout" class="aTag" style="width: 110px;">로그아웃</a>
 
-    <a th:if="${session.loginIuser != null}" href="/user/update">회원정보 수정</a>
-    <br>
-    <a th:if="${session.loginIuser != null}" href="/user/logout">로그아웃</a>
 
+            </div>
+
+<!--            <div >-->
+<!--                <input name="searchWord" type="text" aria-label="Search" placeholder="검색어를 입력하세요"-->
+<!--                       style=" border-color: #a492dd; border-radius: 0; width: 1000px; height: 30px; margin-right: 10px;">-->
+<!--            </div>-->
+<!--            <div id="submit_div" class="relativeL40">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">-->
+<!--                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>-->
+<!--                </svg>-->
+<!--            </div>-->
+        </div>
+        <div style="display: flex; width: 100%; justify-content: center;" class="header_menu">
+            <ul class="flex main_category">
+                <li>게시판
+                    <ul>
+                        <li><a href="/board/list">게시판목록</a></li>
+                    </ul>
+                </li>
+                <li>회원리스트
+                    <ul>
+                        <li th:if="${session.loginIuser != null}"><a href="/user/list">리스트목록</a></li>
+                    </ul>
+                </li>
+                <li>고객센터
+<!--                    <a href="/cscenter/notice">고객센터</a>-->
+                    <ul>
+<!--                        <li><a href="/cscenter/notice">고객센터 안내사항</a></li>-->
+<!--                        <li><a href="/cscenter/faq">자주 묻는 질문</a></li>-->
+<!--                        <li><a href="/cscenter/complaint">1:1 고객문의</a></li>-->
+                        <li>고객센터 안내사항</li>
+                        <li>자주 묻는 질문</li>
+                        <li>1:1 고객문의</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        메인내용
+
+
+    </main>
+
+    <footer></footer>
 </body>
 </html>

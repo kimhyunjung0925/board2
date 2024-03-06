@@ -1,0 +1,33 @@
+.main_category { width: 90%; display: flex; justify-content: center; align-content: center;  height: 100%; margin: 0 auto;  }
+
+
+/* 글자크기를 16px 맑은 고딕 굵게하고  글자색은 검정색, 라인높이50px menu박스 가운데정렬, 글자가운데 정렬, line-height 숫자 높을수록 사이 간격 넓어짐!!  */
+.header_menu { font:bold 18px "malgun gothic"; color:black; line-height: 55px; margin: 0 auto; text-align: center;
+    border-top: solid 1px; border-bottom: solid 1px;}
+
+/* ul li태그에 리스트 스타일을 없앰 */
+ul li{ list-style: none; }
+
+/* header_menu 태그 자식의 ul의 자식 li를 왼쪽정렬과 넓이 설정 */
+.header_menu > ul > li { float: left; width:200px; position:relative; }
+.header_menu > ul > li > ul {  margin:0; padding: 0; width:200px; display:none; position: absolute; font-size:15px; background-color: #f6f6f6;
+    border-left: solid 1px;border-bottom: solid 1px; border-right: solid 1px; border-top: solid 1px; z-index: 1; }
+.header_menu > ul > li:hover > ul { display:block;
+    animation-name: dropdown;
+    animation-duration: 500ms;
+    animation-direction: normal;}
+
+.aTag:link, .aTag:visited {
+    background-color: thistle;
+    color:black;
+    padding: 15px 5px 5px 5px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    /*display: inline-block;*/
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.aTag:hover, .aTag:active {
+    background-color: #FF4500;
+}

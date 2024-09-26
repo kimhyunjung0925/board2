@@ -8,7 +8,9 @@
 </head>
 <body>
     <div class="logo image" >
-        <img th:src="@{/files/hyunjung.png}">
+        <a href="/">
+            <img th:src="@{/files/hyunjung.png}">
+        </a>
     </div>
 
     <form action="/user/login" method="post">
@@ -47,5 +49,6 @@
 
     </form>
 
+    <script src="/js/user/login.js"></script>
 </body>
 </html>

@@ -29,13 +29,6 @@ a{
     margin-bottom: 20px;
 }
 
-img{
-    margin-top:60px;
-    width:70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .member .field{
     margin :5px 0; /*상하로 좀 띄워주기*/
@@ -92,4 +85,35 @@ img{
     .member{
         width: 100%;
     }
+}
+
+.pwTooltip {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 380px;
+    top: -200px; /* Adjust according to input field location */
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Show the description box when the input is focused */
+.pwTool:focus + .pwTooltip {
+    display: block;
+}
+
+/* Styling for input field to avoid overlap */
+.pwTool {
+    margin-bottom: 50px; /* Adjust to provide space for description box */
+}
+
+img{
+    margin-top:60px;
+    width:20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

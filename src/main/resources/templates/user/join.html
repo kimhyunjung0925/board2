@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <title>join화면</title>
     <link rel="icon" href="./images/images2/favicon.png">
+
     <link rel="stylesheet" th:href="@{/css/user/join.css}">
 
+    <style>
+        table {
+            width: 100%;
+            border: 1px solid #444444;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #444444;
+        }
+    </style>
 </head>
 <body>
     <form action="/user/join" method="post" id="join-frm">
         <div class="member">
         <!-- 1. 로고 -->
-            <img class="logo" th:src="@{/files/hyunjung.png}">
+            <a href="/">
+                <img class="logo" th:src="@{/files/hyunjung.png}"  >
+            </a>
+
 
             <div class="field">
     <!--       버튼이용해 onclick 사용도 가능   -->
@@ -21,9 +36,20 @@
                 <span id="id-check-result" style="color: blue"></span>
             </div>
 
-            <div class="field">
+            <div class="field" style="position: relative;">
     <!--        TODO 비밀번호, 이메일 형식 체크 할 예정 -->
-                비밀번호 <input type="password" name="upw" placeholder="비밀번호" class="form-control" id="upw">
+                비밀번호 <input type="password" name="upw" placeholder="비밀번호" class="form-control pwTool" id="upw">
+                <div class="pwTooltip">
+
+                    ※ 비밀번호 입력 조건
+                    - 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자<br>
+                    - 입력 가능 특수문자 <br>
+                    &nbsp;&nbsp;&nbsp;~ ` ! @ # $ % ^ ( ) * _ - = { } [ ] | ; : &lt; &gt; , . ? /<br>
+                    - 공백 입력 불가능<br>
+                    - 연속된 문자, 숫자 사용 불가능<br>
+                    - 동일한 문자, 숫자를 반복해서 사용 불가능<br>- 아이디 포함 불가능
+
+                </div>
                 <span id="pw-check-result" style="color: blue"></span>
             </div>
 

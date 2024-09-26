@@ -55,6 +55,8 @@ public class UserController {
             //로그인성공
             session.setAttribute("loginIuser", loginResult.getIuser());
             session.setAttribute("loginUid", loginResult.getUid());
+            session.setMaxInactiveInterval(30);
+//            session.setMaxInactiveInterval(60*30); //로그인 유지값 1800초 30분
             return "main";
         } else {
             //로그인실패

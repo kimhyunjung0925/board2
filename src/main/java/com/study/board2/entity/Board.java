@@ -12,6 +12,7 @@ public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer iboard;
+    private Integer iuser;
 
     private String title;
     private String content;

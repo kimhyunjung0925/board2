@@ -1,3 +1,5 @@
+//package main.java.com.study.board2;
+
 package com.study.board2;
 
 import org.springframework.boot.SpringApplication;

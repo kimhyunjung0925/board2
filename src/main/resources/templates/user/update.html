@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>회원정보</title>
+
 </head>
 <body>
+    <a href="/">
+        <div style="width: 20%;"><img class="logo" th:src="@{/files/hyunjung.png}" style="width: 140px; height: 40px;"></div>
+    </a>
+
     <form action="/user/update" method="post">
         <input type="hidden" th:value="${updateUser.iuser}" name="iuser"><br>
         아이디 : <input type="text" th:value="${updateUser.uid}" name="uid" style="background-color: darkgray" readonly> <br>

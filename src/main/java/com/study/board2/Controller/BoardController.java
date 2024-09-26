@@ -2,6 +2,7 @@ package com.study.board2.Controller;
 
 import com.study.board2.entity.Board;
 import com.study.board2.service.BoardService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,11 +13,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+
 @Controller
 @RequestMapping("/board")
+
+
 public class BoardController {
     @Autowired
     private BoardService boardService;
+
 
     //글작성폼
     @GetMapping("/write")
@@ -26,7 +31,10 @@ public class BoardController {
 
     //글작성처리
     @PostMapping("/writePro")
-    public String boardWritePro(Board board, Model model, MultipartFile file) throws Exception {
+    public String boardWritePro(Board board, Model model, MultipartFile file, HttpSession hs) throws Exception {
+        Integer myIuser = (Integer) hs.getAttribute("loginIuser");
+        System.out.println(myIuser);
+        board.setIuser(myIuser);
         boardService.boardWrite(board, file);
 
         model.addAttribute("message","글작성이 완료되었습니다.");
@@ -71,6 +79,7 @@ public class BoardController {
     //글상세보기
     @GetMapping("/view")
     public String boardView(Model model, Integer iboard){
+
         model.addAttribute("board", boardService.boardView(iboard));
 
         return "board/View";

@@ -7,18 +7,21 @@
     <link rel="stylesheet" th:href="@{/css/main/main.css}">
 </head>
 <body>
+<!-- 로그인 30분 후 세션 초기화 -->
     <header>
         <div style="display: flex; align-content: center; width: 100%;">
             <div style="width: 20%;"><img class="logo" th:src="@{/files/hyunjung.png}" style="width: 140px; height: 40px;"></div>
             <div style="display: flex; justify-content: end; width: 80%;" >
-                <p th:if="${session.loginIuser != null}" th:text="'현재로그인ID : ' + ${session.loginUid}" style="margin-right: 10px;"></p>
-<!--                <p th:if="${session.loginIuser == null}" th:text="비회원"></p>-->
-                <a th:if="${session.loginIuser == null}" href="/user/login" class="aTag" style="width: 100px;">로그인</a>
-                <a th:if="${session.loginIuser == null}" href="/user/join" class="aTag" style="width: 100px;">회원가입</a>
+<!--                <th:if="${session.}"></th:if>-->
 
-                <a th:if="${session.loginIuser != null}" href="/user/update" class="aTag" style="width: 110px;">회원정보 수정</a>
-                <a th:if="${session.loginIuser != null}" href="/user/logout" class="aTag" style="width: 110px;">로그아웃</a>
+                    <p th:if="${session.loginIuser != null}" th:text="'현재로그인ID : ' + ${session.loginUid}" style="margin-right: 10px;"></p>
+    <!--                <p th:if="${session.loginIuser == null}" th:text="비회원"></p>-->
+                    <a th:if="${session.loginIuser == null}" href="/user/login" class="aTag" style="width: 100px;">로그인</a>
+                    <a th:if="${session.loginIuser == null}" href="/user/join" class="aTag" style="width: 100px;">회원가입</a>
 
+                    <a th:if="${session.loginIuser != null}" href="/user/update" class="aTag" style="width: 110px;">회원정보 수정</a>
+                    <a th:if="${session.loginIuser != null}" href="/user/logout" class="aTag" style="width: 110px;">로그아웃</a>
+                </th:if>
 
             </div>
 

@@ -49,10 +49,10 @@ public class BoardController {
                             String searchKeyword){
         Page<Board> list = null;
 
-        //검색하는 단어가 없을 때(기본)
+        //검색하는 단어가 없을 때 (기본)
         if(searchKeyword == null){
             list = boardService.boardList(pageable);
-        //검색하는 단어가 있을 때(검색시)
+        //검색하는 단어가 있을 때 (검색시)
         } else {
             list = boardService.boardSearchList(searchKeyword,pageable);
         }
